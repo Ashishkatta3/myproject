@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country View</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100vh;
+      background: #111;
+      color: white;
+    }
+    img {
+      width: 60vw;
+      border-radius: 16px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <img id="country-img" src="" alt="">
+  <h1 id="country-title"></h1>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const country = urlParams.get('name');
+    document.getElementById('country-title').textContent = country;
+    document.getElementById('country-img').src = `https://source.unsplash.com/featured/?${country}`;
+  </script>
+</body>
+</html>
