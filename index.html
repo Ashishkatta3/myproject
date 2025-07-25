@@ -1,76 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nationality Input</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-
-    body, html {
-      height: 100%;
-    }
-
-    .top-bar {
-      background-color: rgba(0, 0, 0, 0.7);
-      color: white;
-      padding: 1rem 2rem;
-      text-align: center;
-      font-size: 1.5rem;
-      position: fixed;
-      width: 100%;
-      z-index: 1000;
-    }
-
-    .background {
-      background-image: url('https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=1024x1024&w=0&k=20&c=z8_rWaI8x4zApNEEG9DnWlGXyDIXe-OmsAyQ5fGPVV8='); /* Replace with your image URL */
-      background-size: cover;
-      background-position: center;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .input-box {
-      background-color: rgba(255, 255, 255, 0.85);
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
-      text-align: center;
-    }
-
-    .input-box label {
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-      display: block;
-    }
-
-    .input-box input {
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      width: 100%;
-      max-width: 300px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Explorer</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="top-bar">
-    Welcome to the Nationality Checker
+  <div id="overlay">
+    <label id="input-label">What is your nationality?</label>
+    <select id="input-box"></select>
   </div>
-
-  <div class="background">
-    <div class="input-box">
-      <label for="nationality">What is your nationality?</label>
-      <input type="text" id="nationality" name="nationality" placeholder="Enter your nationality"/>
-    </div>
-  </div>
+  <canvas id="globe-canvas"></canvas>
+  <script type="module" src="script.js"></script>
 </body>
 </html>
