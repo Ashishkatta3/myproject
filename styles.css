@@ -1,36 +1,50 @@
-body, html {
+* {
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  font-family: Arial, sans-serif;
-  background-color: black;
+  box-sizing: border-box;
 }
 
-#globe-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
+body, html {
+  height: 100%;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.hero {
   height: 100vh;
-  z-index: 0;
+  background-image: url('your-image.jpg'); /* replace with actual path */
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
-#overlay {
+.overlay {
   position: absolute;
-  top: 10%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.6);
-  padding: 20px 30px;
-  border-radius: 12px;
-  z-index: 10;
-  color: white;
+  transform: translate(-50%, -50%);
   text-align: center;
+  color: white;
+  width: 100%;
+  padding: 0 2rem;
 }
 
-#input-box {
-  margin-top: 10px;
-  padding: 10px;
-  font-size: 1rem;
-  border-radius: 6px;
+.tagline {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.main-text {
+  font-size: 6rem;
+  font-weight: 700;
+  letter-spacing: 10px;
+  line-height: 1;
+}
+
+.subtext {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  opacity: 0.8;
 }
