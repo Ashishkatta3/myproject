@@ -1,323 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mesmerizing Dubai Desert | GYLRUN</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Raleway', sans-serif;
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
-            color: #fff;
-            overflow-x: hidden;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-        
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470') no-repeat center center;
-            background-size: cover;
-            opacity: 0.7;
-            z-index: -1;
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            padding: 20px;
-            text-align: center;
-            z-index: 10;
-        }
-        
-        .header {
-            margin-bottom: 120px;
-            animation: fadeInDown 1.5s ease-out;
-        }
-        
-        .header h1 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 900;
-            font-size: 3.5rem;
-            letter-spacing: 8px;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-        }
-        
-        .header p {
-            font-size: 1.2rem;
-            letter-spacing: 4px;
-            opacity: 0.9;
-        }
-        
-        .main-content {
-            margin: 80px 0;
-            position: relative;
-        }
-        
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-weight: 900;
-            font-size: 8rem;
-            letter-spacing: 15px;
-            text-transform: uppercase;
-            margin: 40px 0;
-            text-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
-            position: relative;
-            display: inline-block;
-            animation: pulse 4s infinite;
-        }
-        
-        .logo::after {
-            content: '';
-            position: absolute;
-            bottom: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 200px;
-            height: 4px;
-            background: linear-gradient(to right, transparent, #e0b87a, transparent);
-            border-radius: 50%;
-        }
-        
-        .tagline {
-            font-size: 1.8rem;
-            letter-spacing: 6px;
-            text-transform: uppercase;
-            margin-top: 60px;
-            font-weight: 300;
-            animation: fadeInUp 1.5s ease-out;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-        }
-        
-        .cta-button {
-            display: inline-block;
-            margin-top: 60px;
-            padding: 18px 50px;
-            background: transparent;
-            border: 2px solid #e0b87a;
-            color: #fff;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            cursor: pointer;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .cta-button:hover {
-            background: rgba(224, 184, 122, 0.2);
-            letter-spacing: 5px;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(224, 184, 122, 0.3);
-        }
-        
-        .features {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            margin-top: 100px;
-            flex-wrap: wrap;
-        }
-        
-        .feature-card {
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(224, 184, 122, 0.3);
-            border-radius: 10px;
-            padding: 30px;
-            width: 280px;
-            transition: transform 0.4s ease;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-15px) scale(1.03);
-            background: rgba(0, 0, 0, 0.4);
-        }
-        
-        .feature-card i {
-            font-size: 3rem;
-            color: #e0b87a;
-            margin-bottom: 20px;
-        }
-        
-        .feature-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-        
-        .feature-card p {
-            font-size: 1rem;
-            line-height: 1.6;
-            opacity: 0.8;
-        }
-        
-        .footer {
-            margin-top: 100px;
-            padding: 30px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
-            letter-spacing: 2px;
-        }
-        
-        .sand-animation {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100px;
-            background: linear-gradient(transparent, #c2a575);
-            opacity: 0.3;
-            z-index: -1;
-        }
-        
-        /* Animations */
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-                text-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
-            }
-            50% {
-                transform: scale(1.03);
-                text-shadow: 0 10px 30px rgba(224, 184, 122, 0.5);
-            }
-            100% {
-                transform: scale(1);
-                text-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
-            }
-        }
-        
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2.5rem;
-                letter-spacing: 5px;
-            }
-            
-            .logo {
-                font-size: 5rem;
-                letter-spacing: 10px;
-            }
-            
-            .tagline {
-                font-size: 1.3rem;
-                letter-spacing: 4px;
-            }
-            
-            .features {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Desert Horizon</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url('/mnt/data/pexels-pixabay-273886.jpg') center/cover no-repeat;
+      z-index: 1;
+    }
+
+    .title {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 6rem;
+      font-weight: bold;
+      color: white;
+      z-index: 2;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+    }
+
+    .foreground-shape {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url('/mnt/data/pexels-pixabay-273886.jpg') center/cover no-repeat;
+      clip-path: polygon(50% 0%, 70% 20%, 100% 30%, 100% 100%, 0% 100%, 0% 30%, 30% 20%);
+      z-index: 3;
+      pointer-events: none;
+    }
+  </style>
 </head>
 <body>
-    <div class="sand-animation"></div>
-    
-    <div class="container">
-        <div class="header">
-            <h1>MESMERIZING DUBAI DESERT</h1>
-            <p>Experience the magic of golden sands</p>
-        </div>
-        
-        <div class="main-content">
-            <div class="logo">GYLRUN</div>
-            <div class="tagline">REACH THE HORIZON IN DUBAI'S DESERT</div>
-            <button class="cta-button">BOOK YOUR EXPERIENCE</button>
-        </div>
-        
-        <div class="features">
-            <div class="feature-card">
-                <i class="fas fa-sun"></i>
-                <h3>Sunset Safari</h3>
-                <p>Witness breathtaking sunsets over the dunes, an unforgettable experience in the heart of the desert.</p>
-            </div>
-            
-            <div class="feature-card">
-                <i class="fas fa-camera"></i>
-                <h3>Desert Photography</h3>
-                <p>Capture the stunning landscapes and create memories that will last a lifetime.</p>
-            </div>
-            
-            <div class="feature-card">
-                <i class="fas fa-star"></i>
-                <h3>Stargazing</h3>
-                <p>Experience the crystal-clear night skies and marvel at the beauty of the universe.</p>
-            </div>
-        </div>
-        
-        <div class="footer">
-            <p>© 2025 GYLRUN DUBAI DESERT EXPERIENCE | ALL RIGHTS RESERVED</p>
-        </div>
-    </div>
-    
-    <script>
-        // Add interactive effects
-        document.addEventListener('DOMContentLoaded', function() {
-            const ctaButton = document.querySelector('.cta-button');
-            
-            ctaButton.addEventListener('mouseenter', () => {
-                ctaButton.style.background = 'rgba(224, 184, 122, 0.2)';
-            });
-            
-            ctaButton.addEventListener('mouseleave', () => {
-                ctaButton.style.background = 'transparent';
-            });
-            
-            // Add parallax effect to background
-            window.addEventListener('scroll', function() {
-                const scrollPosition = window.scrollY;
-                document.body.style.backgroundPosition = `center ${scrollPosition * 0.5}px`;
-            });
-            
-            // Add sand animation
-            const sandAnimation = document.querySelector('.sand-animation');
-            setInterval(() => {
-                const opacity = 0.2 + Math.random() * 0.2;
-                sandAnimation.style.opacity = opacity;
-            }, 3000);
-        });
-    </script>
+  <div class="background"></div>
+  <div class="title">Welcome</div>
+  <div class="foreground-shape"></div>
 </body>
 </html>
